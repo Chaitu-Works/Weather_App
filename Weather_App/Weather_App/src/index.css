@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #1a2980, #26d0ce, #f2fcfe, #1a2980);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+.tesla-btn {
+  @apply px-6 py-2 rounded-full font-semibold shadow-md transition-all duration-200;
+  background: linear-gradient(90deg, #1a2980 0%, #26d0ce 100%);
+  color: #fff;
+  border: none;
+}
+.tesla-btn:hover {
+  background: linear-gradient(90deg, #26d0ce 0%, #1a2980 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 24px 0 rgba(26,41,128,0.15);
+}
+
+.tesla-input {
+  @apply px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-200;
+  background: rgba(255,255,255,0.7);
+  font-size: 1.1rem;
+}
+
+.tesla-divider {
+  height: 1px;
+  background: linear-gradient(90deg, #1a2980 0%, #26d0ce 100%);
+  opacity: 0.2;
+  margin: 1.5rem 0;
+}
